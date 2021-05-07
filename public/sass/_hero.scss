@@ -1,0 +1,97 @@
+#hero-section {
+    height: 64vh;
+    background-size: cover;
+    background-position: center center;
+    .hero-content {
+        padding-top: 8rem;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        h1 {
+            color: #fff;
+            font-weight: 600;
+            font-size: 3rem;
+            span {
+                font-size: 1.1rem;    
+            }
+        }
+        .hero-btns {
+            margin: 12px;
+            .shop-now {
+                color: #fff;
+                font-weight: 700;
+                background-color: #f66249;
+                padding: .8rem 1.4rem;
+                border-radius: 8px;
+                margin-right: 12px;
+                &:hover {
+                    text-decoration: none;
+                }
+            }
+            .learn-more {
+                border: 1px solid white;
+                font-weight: 700;
+                color: #fff;
+                padding: 0.78rem 1.38rem;
+                border-radius: 8px;
+                transition: all 0.3s ease;
+                &:hover {
+                    text-decoration: none;
+                    background-color: #f66249;
+                    border-color: #f66249;
+                }
+            }
+        }
+    }
+}
+#showcase-section {
+    padding: 1rem 0;
+    .showcase-container {
+        display: grid;
+        grid-template-columns: repeat(3 , 1fr);
+    }
+    background-color: #f66249;
+    color: #fff;
+    .single-showcase {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        .showcase-icon {
+            margin-right: 15px !important;
+            p {
+                margin-bottom: 0 !important;
+            }
+            i {
+                font-size: 2rem;
+            }
+        }
+        .showcase-text {
+            p {
+                margin: 0 !important;
+                font-size: 1rem;
+                font-weight: 700;
+            }
+            span {
+                font-weight: lighter;
+                font-size: 0.96rem;
+            }
+        }
+        &:nth-child(2) {
+            border-right: 1px solid rgba(175, 175, 175, 0.8);
+            border-left: 1px solid rgba(175, 175, 175, 0.8);
+        }
+    }
+}
+/*Media Queryires*/
+@media (max-width:900px) {
+    .showcase-container {
+        grid-template-columns: repeat(1 , 1fr) !important;
+        row-gap: 20px;
+    }
+    .single-showcase {
+        &:nth-child(2) {
+            border: 0 !important;
+        }
+        justify-content: flex-start !important;
+    }
+}
